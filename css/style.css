@@ -424,3 +424,114 @@ section.tratamentos .tratamento-container{
 	border-color: transparent;
 	box-shadow: var(--sombra);
 }
+
+/**DEPOIMENTOS**/
+
+section.depoimentos{
+	padding: var(--espaco-secao) 0;
+	background-color: var(--cor-fundo);
+}
+
+.depoimentos-intro{
+	margin-bottom: 44px;
+	text-align: center;
+}
+
+.depoimentos-intro h2{
+	margin-top: 8px;
+}
+
+.depoimentos-wraper{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 24px;
+}
+
+section.depoimentos .depoimento-single{
+	padding: 30px 28px;
+	background-color: var(--cor-fundo-alt);
+	border-radius: var(--raio);
+}
+
+.depoimento-single blockquote{
+	font-size: 0.98rem;
+	color: var(--cor-texto);
+}
+
+.depoimento-single .nome-depoimento{
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	margin-top: 20px;
+}
+
+.nome-depoimento img{
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+}
+
+.nome-depoimento span{
+	font-size: 0.9rem;
+	font-weight: 600;
+	color: var(--cor-primaria);
+}
+
+/**SOCIAL**/
+
+.instagram-chamada,
+.facebook-chamada{
+	text-align: center;
+	padding: 48px 24px;
+}
+
+.instagram-chamada{
+	background-color: var(--cor-primaria-clara);
+}
+
+.facebook-chamada{
+	background-color: var(--cor-primaria);
+}
+
+.instagram-chamada a img,
+.facebook-chamada a img{
+	width: 34px;
+	margin: 0 auto;
+	filter: brightness(0) invert(1);
+	transition: transform var(--transicao);
+}
+
+.instagram-chamada a:hover img,
+.facebook-chamada a:hover img{
+	transform: translateY(-3px) scale(1.05);
+}
+
+.instagram-chamada p,
+.facebook-chamada p{
+	margin-top: 12px;
+	color: white;
+	font-size: 0.9rem;
+	line-height: 1.7;
+}
+
+section.social .container{
+	padding-top: 32px;
+	padding-bottom: 32px;
+}
+
+.mosaico-social{
+	display: grid;
+	grid-template-columns: repeat(9, 1fr);
+	gap: 12px;
+}
+
+.img-mosaico-single-social{
+	aspect-ratio: 1 / 1;
+	border-radius: var(--raio-sm);
+	background-image: linear-gradient(135deg, var(--cor-primaria-clara), var(--cor-primaria));
+	transition: transform var(--transicao);
+}
+
+.img-mosaico-single-social:hover{
+	transform: scale(1.05);
+}
