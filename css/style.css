@@ -694,3 +694,171 @@ footer .footer-block{
 	color: rgba(255,255,255,0.65);
 	font-size: 0.8rem;
 }
+
+/**Responsividade**/
+
+@media screen and (max-width: 1024px){
+
+	section.servicos > .container{
+		margin-top: -48px;
+	}
+
+	section.tratamentos .tratamento-container{
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.mosaico-social{
+		grid-template-columns: repeat(6, 1fr);
+	}
+
+	.mosaico-social > div:nth-of-type(1n+7){
+		display: none;
+	}
+}
+
+@media screen and (max-width: 900px){
+
+	.menu-mobile{
+		display: block;
+	}
+
+	header nav.menu-desktop{
+		position: relative;
+	}
+
+	header nav.menu-desktop ul{
+		position: absolute;
+		right: 0;
+		top: calc(100% + 14px);
+		flex-direction: column;
+		align-items: stretch;
+		gap: 4px;
+		width: min(280px, 76vw);
+		padding: 12px;
+		border: 1px solid var(--cor-borda);
+		border-radius: var(--raio);
+		background-color: var(--cor-fundo);
+		box-shadow: var(--sombra);
+		opacity: 0;
+		visibility: hidden;
+		transform: translateY(-10px);
+		transition: opacity var(--transicao), transform var(--transicao), visibility var(--transicao);
+	}
+
+	header nav.menu-desktop ul.aberto{
+		opacity: 1;
+		visibility: visible;
+		transform: translateY(0);
+	}
+
+	header nav.menu-desktop ul li{
+		width: 100%;
+	}
+
+	header nav.menu-desktop ul li a{
+		display: block;
+		padding: 12px 14px;
+		border-radius: var(--raio-sm);
+	}
+
+	header nav.menu-desktop ul li a::after{
+		display: none;
+	}
+
+	header nav.menu-desktop ul li a:hover{
+		background-color: var(--cor-fundo-alt);
+	}
+
+	.menu-mobile.ativo span:nth-child(1){
+		transform: translateY(7px) rotate(45deg);
+	}
+
+	.menu-mobile.ativo span:nth-child(2){
+		opacity: 0;
+	}
+
+	.menu-mobile.ativo span:nth-child(3){
+		transform: translateY(-7px) rotate(-45deg);
+	}
+}
+
+@media screen and (max-width: 768px){
+
+	.mosaico-wraper{
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	section.servicos > .container{
+		flex-direction: column;
+		margin-top: -40px;
+	}
+
+	section.perfil-container .perfil-wraper2{
+		flex-direction: column;
+		text-align: center;
+	}
+
+	section.perfil-container .img-perfil{
+		width: 240px;
+		max-width: 70%;
+	}
+
+	.videos-wraper{
+		grid-template-columns: 1fr;
+		max-width: 480px;
+		margin: 0 auto;
+	}
+
+	.depoimentos-wraper{
+		grid-template-columns: 1fr;
+		max-width: 480px;
+		margin: 0 auto;
+	}
+
+	.mosaico-social{
+		grid-template-columns: repeat(4, 1fr);
+	}
+
+	.mosaico-social > div:nth-of-type(1n+5){
+		display: none;
+	}
+
+	footer .container{
+		text-align: center;
+	}
+
+	footer .footer-block{
+		flex: none;
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 560px){
+
+	.container{
+		padding: 0 18px;
+	}
+
+	header .logo img{
+		width: 180px;
+	}
+
+	section.tratamentos .tratamento-container{
+		grid-template-columns: 1fr;
+	}
+
+	.w50{
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 480px){
+
+	.mosaico-wraper{
+		grid-template-columns: 1fr;
+	}
+
+	.mosaico-social{
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
