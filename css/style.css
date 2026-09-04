@@ -193,3 +193,45 @@ header nav.menu-desktop ul li a:hover::after{
 	background-color: var(--cor-primaria);
 	transition: transform var(--transicao), opacity var(--transicao);
 }
+
+/**MOSAICO**/
+
+section.mosaico{
+	padding: var(--espaco-secao) 0;
+	background-color: var(--cor-fundo-alt);
+}
+
+.mosaico-intro{
+	max-width: 720px;
+	margin: 0 auto 48px;
+	text-align: center;
+}
+
+.mosaico-intro h1{
+	margin: 12px 0 16px;
+}
+
+.mosaico-intro p{
+	font-size: 1.05rem;
+	margin-bottom: 28px;
+}
+
+.mosaico-wraper{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 16px;
+}
+
+.img-mosaico-single{
+	width: 100%;
+	aspect-ratio: 4 / 3;
+	border-radius: var(--raio);
+	background-color: #ccc;
+	background-image: linear-gradient(135deg, var(--cor-primaria-clara), var(--cor-primaria));
+	transition: transform 0.5s ease, box-shadow var(--transicao);
+}
+
+.mosaico-single:hover .img-mosaico-single{
+	transform: translateY(-4px);
+	box-shadow: var(--sombra);
+}
