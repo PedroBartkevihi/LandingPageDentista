@@ -26,8 +26,6 @@
 	--max-largura: 1180px;
 }
 
-/**Base**/
-
 html{
 	scroll-behavior: smooth;
 	scroll-padding-top: 90px;
@@ -105,16 +103,12 @@ p{
 	box-shadow: var(--sombra-suave);
 }
 
-/**Container**/
-
 .container{
 	max-width: var(--max-largura);
 	width: 100%;
 	margin: 0 auto;
 	padding: 0 24px;
 }
-
-/**Header do site**/
 
 header{
 	position: sticky;
@@ -196,8 +190,6 @@ header nav.menu-desktop ul li a:hover::after{
 	transition: transform var(--transicao), opacity var(--transicao);
 }
 
-/**MOSAICO**/
-
 section.mosaico{
 	padding: var(--espaco-secao) 0;
 	background-color: var(--cor-fundo-alt);
@@ -237,8 +229,6 @@ section.mosaico{
 	transform: translateY(-4px);
 	box-shadow: var(--sombra);
 }
-
-/**SERVICOS**/
 
 section.servicos{
 	padding: var(--espaco-secao) 0;
@@ -293,8 +283,6 @@ section.servicos > .container .box-servico:hover{
 	box-shadow: var(--sombra);
 }
 
-/**PERFIL**/
-
 section.perfil-container{
 	padding: var(--espaco-secao) 0;
 	background-color: var(--cor-fundo-alt);
@@ -342,8 +330,6 @@ section.perfil-container .texto-perfil p + p{
 	margin-top: 14px;
 }
 
-/**VIDEOS**/
-
 section.videos{
 	padding: var(--espaco-secao) 0;
 	background-color: var(--cor-fundo);
@@ -381,8 +367,6 @@ section.videos iframe{
 	height: 100%;
 	border: 0;
 }
-
-/**TRATAMENTOS**/
 
 section.tratamentos{
 	padding: var(--espaco-secao) 0;
@@ -427,8 +411,6 @@ section.tratamentos .tratamento-container{
 	border-color: transparent;
 	box-shadow: var(--sombra);
 }
-
-/**DEPOIMENTOS**/
 
 section.depoimentos{
 	padding: var(--espaco-secao) 0;
@@ -479,8 +461,6 @@ section.depoimentos .depoimento-single{
 	font-weight: 600;
 	color: var(--cor-primaria);
 }
-
-/**SOCIAL**/
 
 .instagram-chamada,
 .facebook-chamada{
@@ -538,8 +518,6 @@ section.social .container{
 .img-mosaico-single-social:hover{
 	transform: scale(1.05);
 }
-
-/**CONTATO**/
 
 section.contato{
 	padding: var(--espaco-secao) 2%;
@@ -654,8 +632,6 @@ section.contato form{
 	color: var(--cor-primaria);
 }
 
-/**Footer**/
-
 footer{
 	padding: clamp(48px, 7vw, 72px) 2% 32px;
 	background-color: var(--cor-primaria-escura);
@@ -697,8 +673,6 @@ footer .footer-block{
 	color: rgba(255,255,255,0.65);
 	font-size: 0.8rem;
 }
-
-/**Estados de foco, seleção e movimento**/
 
 ::selection{
 	background-color: var(--cor-primaria-clara);
@@ -757,8 +731,6 @@ textarea:focus-visible{
 		transform: none;
 	}
 }
-
-/**Responsividade**/
 
 @media screen and (max-width: 1024px){
 
