@@ -131,9 +131,37 @@ header .container{
 	padding-bottom: 16px;
 }
 
-header .logo img{
-	width: 210px;
-	filter: brightness(0.45) contrast(1.15);
+header .logo a{
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.logo-icone{
+	width: 30px;
+	height: 30px;
+	flex-shrink: 0;
+	color: var(--cor-primaria);
+}
+
+.logo-texto{
+	display: flex;
+	flex-direction: column;
+	line-height: 1.1;
+}
+
+.logo-texto strong{
+	font-size: 1.15rem;
+	font-weight: 700;
+	color: var(--cor-primaria);
+}
+
+.logo-texto span{
+	font-size: 0.6rem;
+	font-weight: 600;
+	letter-spacing: 0.22em;
+	text-transform: uppercase;
+	color: var(--cor-texto-suave);
 }
 
 header nav.menu-desktop ul{
@@ -217,11 +245,12 @@ section.mosaico{
 }
 
 .img-mosaico-single{
+	display: block;
 	width: 100%;
 	aspect-ratio: 4 / 3;
+	object-fit: cover;
 	border-radius: var(--raio);
-	background-color: #ccc;
-	background-image: linear-gradient(135deg, var(--cor-primaria-clara), var(--cor-primaria));
+	background-color: var(--cor-fundo-alt);
 	transition: transform 0.5s ease, box-shadow var(--transicao);
 }
 
@@ -299,14 +328,14 @@ section.perfil-container .perfil-wraper2{
 }
 
 section.perfil-container .img-perfil{
+	display: block;
 	flex-shrink: 0;
 	width: 300px;
 	max-width: 38%;
-	aspect-ratio: 354 / 437;
+	aspect-ratio: 4 / 5;
+	object-fit: cover;
+	object-position: top center;
 	border-radius: var(--raio);
-	background-image: url('../imagens/img_perfil.png');
-	background-size: cover;
-	background-position: top center;
 	box-shadow: var(--sombra);
 }
 
@@ -450,13 +479,22 @@ section.depoimentos .depoimento-single{
 	margin-top: 20px;
 }
 
-.nome-depoimento img{
+.nome-depoimento .avatar{
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	width: 40px;
 	height: 40px;
+	flex-shrink: 0;
 	border-radius: 50%;
+	background-color: var(--cor-primaria);
+	color: white;
+	font-size: 0.8rem;
+	font-weight: 600;
+	letter-spacing: 0.03em;
 }
 
-.nome-depoimento span{
+.nome-depoimento span:not(.avatar){
 	font-size: 0.9rem;
 	font-weight: 600;
 	color: var(--cor-primaria);
@@ -504,14 +542,17 @@ section.social .container{
 
 .mosaico-social{
 	display: grid;
-	grid-template-columns: repeat(9, 1fr);
+	grid-template-columns: repeat(6, 1fr);
 	gap: 12px;
 }
 
 .img-mosaico-single-social{
+	display: block;
+	width: 100%;
 	aspect-ratio: 1 / 1;
+	object-fit: cover;
 	border-radius: var(--raio-sm);
-	background-image: linear-gradient(135deg, var(--cor-primaria-clara), var(--cor-primaria));
+	background-color: var(--cor-fundo-alt);
 	transition: transform var(--transicao);
 }
 
@@ -693,12 +734,11 @@ textarea:focus-visible{
 }
 
 .logo a{
-	display: inline-block;
 	transition: opacity var(--transicao);
 }
 
 .logo a:hover{
-	opacity: 0.75;
+	opacity: 0.7;
 }
 
 [data-revelar]{
@@ -740,14 +780,6 @@ textarea:focus-visible{
 
 	section.tratamentos .tratamento-container{
 		grid-template-columns: repeat(2, 1fr);
-	}
-
-	.mosaico-social{
-		grid-template-columns: repeat(6, 1fr);
-	}
-
-	.mosaico-social > div:nth-of-type(1n+7){
-		display: none;
 	}
 }
 
@@ -851,11 +883,7 @@ textarea:focus-visible{
 	}
 
 	.mosaico-social{
-		grid-template-columns: repeat(4, 1fr);
-	}
-
-	.mosaico-social > div:nth-of-type(1n+5){
-		display: none;
+		grid-template-columns: repeat(3, 1fr);
 	}
 
 	footer .container{
@@ -874,8 +902,8 @@ textarea:focus-visible{
 		padding: 0 18px;
 	}
 
-	header .logo img{
-		width: 180px;
+	.logo-texto strong{
+		font-size: 1.05rem;
 	}
 
 	section.tratamentos .tratamento-container{
@@ -890,6 +918,6 @@ textarea:focus-visible{
 @media screen and (max-width: 480px){
 
 	.mosaico-social{
-		grid-template-columns: repeat(3, 1fr);
+		grid-template-columns: repeat(2, 1fr);
 	}
 }

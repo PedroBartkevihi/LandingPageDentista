@@ -1,12 +1,16 @@
-# Landing Page — Dra. Marina Rocha (projeto de estudo)
+# Aurora Odontologia — Landing Page (projeto de estudo)
 
 **Ver online:** https://pedrobartkevihi.github.io/LandingPageDentista/
 
-Recriação **para fins de estudo** de uma landing page de consultório
-odontológico. Partindo de um exercício de curso feito só com HTML e CSS, o
-objetivo aqui foi modernizar o visual — layout, tipografia, cores,
-espaçamentos, botões, cards, responsividade e pequenas interações — mantendo a
-mesma ideia, o mesmo conteúdo e o estilo de escrita do código original.
+Landing page **fictícia** de uma clínica odontológica, criada **para fins de
+estudo**. Partindo de um exercício de curso feito só com HTML e CSS, o objetivo
+foi modernizar o visual — layout, tipografia, cores, espaçamentos, botões,
+cards, responsividade e pequenas interações — mantendo o estilo de escrita do
+código original.
+
+A clínica **Aurora Odontologia**, a **Dra. Marina Rocha** e todos os dados de
+contato, endereço e depoimentos são inventados para este projeto e não
+correspondem a nenhuma pessoa ou empresa real.
 
 ## Tecnologias
 
@@ -27,27 +31,25 @@ Projeto3/
 ├── js/
 │   └── script.js
 └── imagens/
-    ├── logo.png
-    ├── img_perfil.png
-    ├── depoimento1.png
-    ├── icone_dente.png
-    ├── inst.png
-    ├── fb.png
-    └── menu-mobile.png   (hamburguer do original; hoje o botão é feito em CSS)
+    ├── icone_dente.png     (ícone usado nos cards de serviços)
+    ├── inst.png / fb.png   (ícones de Instagram e Facebook)
+    ├── perfil-dentista.jpg (foto da seção "A clínica")
+    ├── mosaico-1..6.jpg    (galeria da seção principal)
+    └── social-1..6.jpg     (galeria da seção social)
 ```
 
 ## Seções
 
-1. **Header** — logo e menu (vira dropdown no mobile, pelo `.menu-mobile`).
+1. **Header** — logo (ícone + marca textual) e menu (vira dropdown no mobile).
 2. **Mosaico** — chamada principal (kicker, título e botão) e galeria de fotos.
 3. **Serviços** — três cartões com o ícone do dente, sobre o mosaico.
-4. **Perfil** — foto e apresentação da profissional.
+4. **A clínica** — foto e apresentação da profissional.
 5. **Vídeos** — três vídeos incorporados em 16:9.
 6. **Tratamentos** — grade de cartões com os procedimentos.
 7. **Depoimentos** — depoimentos de pacientes em cartões.
 8. **Social** — faixas de Instagram e Facebook com galeria.
 9. **Contato** — formulário (nome, e-mail, telefone e mensagem).
-10. **Rodapé** — telefone, horários e endereço.
+10. **Rodapé** — contato, horários e endereço.
 
 ## Interações (`js/script.js`)
 
@@ -68,16 +70,15 @@ python -m http.server 8080
 
 E acesse `http://localhost:8080`.
 
-## Uso educacional e direitos
+## Créditos das imagens
 
-Este repositório é **apenas um exercício de front-end, sem fins comerciais**.
+As fotos vêm do [Pexels](https://www.pexels.com/) (licença livre, sem
+necessidade de atribuição) e foram apenas redimensionadas e otimizadas. O
+ícone da logo é um desenho simples em SVG, feito para este projeto.
 
-- O nome, a logo e a foto que aparecem na página pertencem aos seus respectivos
-  titulares e são usados aqui só a título ilustrativo, para estudo.
-- Os textos de serviços, tratamentos e depoimentos são fictícios, escritos
-  apenas para preencher o layout.
-- O código-fonte (HTML, CSS e JavaScript) é de autoria de **Pedro Farias** e
-  pode ser reaproveitado livremente.
-- Para uso como portfólio público, o recomendado é **trocar a logo e as
-  imagens** por material próprio ou de bancos livres (ex.: Unsplash, Pexels).
-- Caso algum detentor de direitos entre em contato, o conteúdo será removido.
+## Uso
+
+Repositório de **estudo de front-end, sem fins comerciais**. O código-fonte
+(HTML, CSS e JavaScript) é de autoria de **Pedro Farias** e pode ser
+reaproveitado livremente. Toda a identidade (nome da clínica, profissional,
+textos e contatos) é fictícia.
