@@ -99,6 +99,44 @@
 	}
 
 
+	var numeros = document.querySelectorAll(".numero");
+
+	function animaNumero(el){
+		var alvo = parseInt(el.getAttribute("data-numero"), 10);
+		var sufixo = el.getAttribute("data-sufixo") || "";
+		var duracao = 1200;
+		var inicio = null;
+
+		function passo(agora){
+			if(!inicio) inicio = agora;
+			var progresso = Math.min((agora - inicio) / duracao, 1);
+			el.textContent = Math.floor(progresso * alvo).toLocaleString("pt-BR") + sufixo;
+			if(progresso < 1){
+				requestAnimationFrame(passo);
+			}
+		}
+
+		requestAnimationFrame(passo);
+	}
+
+	if(numeros.length && !semAnimacao && "IntersectionObserver" in window){
+		try{
+			var observadorNumeros = new IntersectionObserver(function(entradas){
+				entradas.forEach(function(entrada){
+					if(entrada.isIntersecting){
+						animaNumero(entrada.target);
+						observadorNumeros.unobserve(entrada.target);
+					}
+				});
+			}, { threshold: 0.4 });
+
+			numeros.forEach(function(el){ observadorNumeros.observe(el); });
+		}catch(erro){
+			// mantem os valores estaticos que ja estao no HTML
+		}
+	}
+
+
 	var form = document.querySelector("section.contato form");
 
 	if(form){

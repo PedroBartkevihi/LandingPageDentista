@@ -46,7 +46,7 @@ direto no `index.html` (sem depender de arquivo de imagem).
 2. **Mosaico** — chamada principal (kicker, título e botão) e galeria de fotos.
 3. **Serviços** — três cartões com o ícone do dente, sobre o mosaico.
 4. **A clínica** — foto e apresentação da profissional.
-5. **Vídeos** — três vídeos incorporados em 16:9.
+5. **Números** — faixa de destaque com estatísticas da clínica.
 6. **Tratamentos** — grade de cartões com os procedimentos.
 7. **Depoimentos** — depoimentos de pacientes em cartões.
 8. **Social** — faixas de Instagram e Facebook com galeria.
@@ -58,6 +58,7 @@ direto no `index.html` (sem depender de arquivo de imagem).
 - Abre/fecha o menu no mobile (com `Esc`, clique fora e clique em link).
 - Sombra no header ao rolar a página.
 - Elementos `[data-revelar]` surgem ao entrar na tela (`IntersectionObserver`).
+- Números da seção de estatísticas contam a partir de zero ao entrar na tela.
 - Feedback ao enviar o formulário (não há back-end).
 - Respeita `prefers-reduced-motion` e funciona sem JavaScript.
 
