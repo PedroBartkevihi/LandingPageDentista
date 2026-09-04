@@ -32,11 +32,13 @@ Projeto3/
 │   └── script.js
 └── imagens/
     ├── icone_dente.png     (ícone usado nos cards de serviços)
-    ├── inst.png / fb.png   (ícones de Instagram e Facebook)
     ├── perfil-dentista.jpg (foto da seção "A clínica")
     ├── mosaico-1..6.jpg    (galeria da seção principal)
     └── social-1..6.jpg     (galeria da seção social)
 ```
+
+Os ícones da logo, do Instagram e do Facebook são SVGs simples, desenhados
+direto no `index.html` (sem depender de arquivo de imagem).
 
 ## Seções
 

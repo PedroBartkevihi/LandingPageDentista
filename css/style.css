@@ -514,16 +514,17 @@ section.depoimentos .depoimento-single{
 	background-color: var(--cor-primaria);
 }
 
-.instagram-chamada a img,
-.facebook-chamada a img{
-	width: 34px;
+.icone-social{
+	display: block;
+	width: 32px;
+	height: 32px;
 	margin: 0 auto;
-	filter: brightness(0) invert(1);
+	color: white;
 	transition: transform var(--transicao);
 }
 
-.instagram-chamada a:hover img,
-.facebook-chamada a:hover img{
+.instagram-chamada a:hover .icone-social,
+.facebook-chamada a:hover .icone-social{
 	transform: translateY(-3px) scale(1.05);
 }
 
