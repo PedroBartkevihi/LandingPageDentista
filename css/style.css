@@ -61,6 +61,7 @@ h1,h2,h3{
 	font-weight: 600;
 	line-height: 1.2;
 	color: var(--cor-primaria);
+	text-wrap: balance;
 }
 
 h1{
@@ -138,6 +139,7 @@ header .container{
 
 header .logo img{
 	width: 210px;
+	filter: brightness(0.45) contrast(1.15);
 }
 
 header nav.menu-desktop ul{
@@ -367,6 +369,7 @@ section.videos .box-video{
 	aspect-ratio: 16 / 9;
 	border-radius: var(--raio);
 	overflow: hidden;
+	background-color: var(--cor-fundo-alt);
 	box-shadow: var(--sombra-suave);
 }
 
@@ -913,10 +916,6 @@ textarea:focus-visible{
 }
 
 @media screen and (max-width: 480px){
-
-	.mosaico-wraper{
-		grid-template-columns: 1fr;
-	}
 
 	.mosaico-social{
 		grid-template-columns: repeat(3, 1fr);
