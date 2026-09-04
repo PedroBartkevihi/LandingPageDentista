@@ -235,3 +235,107 @@ section.mosaico{
 	transform: translateY(-4px);
 	box-shadow: var(--sombra);
 }
+
+/**SERVICOS**/
+
+section.servicos{
+	padding: var(--espaco-secao) 0;
+	background-color: var(--cor-fundo);
+}
+
+section.servicos > .container{
+	display: flex;
+	gap: 24px;
+	margin-top: -72px;
+	position: relative;
+	z-index: 1;
+}
+
+section.servicos > .container .box-servico{
+	flex: 1;
+	padding: 40px 28px;
+	text-align: center;
+	background-color: var(--cor-fundo);
+	border: 1px solid var(--cor-borda);
+	border-radius: var(--raio);
+	box-shadow: var(--sombra-suave);
+	transition: transform var(--transicao), box-shadow var(--transicao);
+}
+
+section.servicos > .container .box-servico::before{
+	content: "";
+	display: block;
+	width: 46px;
+	height: 46px;
+	margin: 0 auto 18px;
+	border-radius: 50%;
+	background-color: var(--cor-fundo-alt);
+	background-image: url('../imagens/icone_dente.png');
+	background-size: 22px 22px;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+section.servicos > .container .box-servico h2{
+	color: var(--cor-primaria);
+	font-size: 1.1rem;
+}
+
+section.servicos > .container .box-servico p{
+	margin-top: 10px;
+	font-size: 0.95rem;
+}
+
+section.servicos > .container .box-servico:hover{
+	transform: translateY(-4px);
+	box-shadow: var(--sombra);
+}
+
+/**PERFIL**/
+
+section.perfil-container{
+	padding: var(--espaco-secao) 0;
+	background-color: var(--cor-fundo-alt);
+}
+
+section.perfil-container .container{
+	max-width: 960px;
+}
+
+section.perfil-container .perfil-wraper2{
+	display: flex;
+	align-items: center;
+	gap: clamp(28px, 5vw, 64px);
+}
+
+section.perfil-container .img-perfil{
+	flex-shrink: 0;
+	width: 300px;
+	max-width: 38%;
+	aspect-ratio: 354 / 437;
+	border-radius: var(--raio);
+	background-image: url('../imagens/img_perfil.png');
+	background-size: cover;
+	background-position: top center;
+	box-shadow: var(--sombra);
+}
+
+section.perfil-container .texto-perfil h2{
+	margin: 10px 0 2px;
+	font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+}
+
+section.perfil-container .texto-perfil .cargo{
+	margin-bottom: 16px;
+	color: var(--cor-destaque-escura);
+	font-size: 0.9rem;
+	font-weight: 600;
+}
+
+section.perfil-container .texto-perfil p{
+	font-size: 0.98rem;
+}
+
+section.perfil-container .texto-perfil p + p{
+	margin-top: 14px;
+}
